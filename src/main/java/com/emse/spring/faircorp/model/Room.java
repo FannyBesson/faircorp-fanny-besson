@@ -3,7 +3,6 @@ package com.emse.spring.faircorp.model;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "ROOM")
@@ -28,6 +27,10 @@ public class Room {
     @OneToMany(mappedBy = "room")
     private List<Window> windows;
 
+    //add for building
+    @ManyToOne(optional = false)
+    private Building building;
+
     public Room() {
     }
 
@@ -40,6 +43,21 @@ public class Room {
     public Room(String name, Integer floor) {
         this.name = name;
         this.floor = floor;
+    }
+
+    //add for building
+    public Room(Long id, String name, Integer floor, Building building) {
+        this.id = id;
+        this.name = name;
+        this.floor = floor;
+        this.building = building;
+    }
+
+    //add for building
+    public Room(String name, Integer floor, Building building) {
+        this.name = name;
+        this.floor = floor;
+        this.building = building;
     }
 
     public Long getId() {
@@ -96,5 +114,14 @@ public class Room {
 
     public void setWindows(List<Window> windows) {
         this.windows = windows;
+    }
+
+    //add for buildings
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
     }
 }

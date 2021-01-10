@@ -38,7 +38,6 @@ public class RoomController {
 
     @PostMapping
     public RoomDto create(@RequestBody RoomDto dto) {
-        //ne marche pas
         Room room = null;
         if (dto.getId() == null) {
             room = roomDao.save(new Room(dto.getName(), dto.getFloor()));
