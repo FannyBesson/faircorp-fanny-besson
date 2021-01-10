@@ -28,7 +28,7 @@ public class Room {
     private List<Window> windows;
 
     //add for building
-    @ManyToOne(optional = false)
+    @ManyToOne
     private Building building;
 
     public Room() {
