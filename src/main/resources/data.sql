@@ -1,3 +1,5 @@
+INSERT INTO BUIDLING(id, name) VALUES(-10, 'Building1');
+
 INSERT INTO ROOM(id, name, floor, current_temperature, target_temperature, building_id) VALUES(-10, 'Room1', 1, 22.3, 20.0, -10);
 INSERT INTO ROOM(id, name, floor, buidling_id) VALUES(-9, 'Room2', 1, -10);
 
@@ -9,4 +11,4 @@ INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-9, 'CLOSED', 'Wind
 INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-8, 'OPEN', 'Window 1', -9);
 INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-7, 'CLOSED', 'Window 2', -9);
 
-INSERT INTO ROOM(id, name) VALUES(-10, 'Building1');
+
